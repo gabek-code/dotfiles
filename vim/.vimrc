@@ -81,6 +81,9 @@ set nowrap
 
 set autoindent
 
+" Fuck swapfiles
+set noswapfile
+
 " Search settings
 set hlsearch
 set hidden

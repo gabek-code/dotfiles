@@ -1,0 +1,59 @@
+!--------------------xdefauls
+!URxvt.font: noto:notosans:pixelsize=16
+URxvt.font: xft:mono:pixelsize=16
+!URxvt.font: xft:SpaceMono Nerd Font:pixelsize=17
+!URxvt.font: xft:Hack Nerd Font Mono:style=Regular:pixelsize=16
+urxvt*termName: rxvt
+urxvt*scrollBar: false
+urxvt*matcher.button: 1
+urxvt.transparent: false
+urxvt.boldFont:
+Xft*dpi: 96
+Xft*antialias: true
+Xft*hinting: true
+Xft*hintstyle: hintfull
+URxvt*cursorUnderline:  true
+Xft*rgba: rgb
+URxvt*geometry: 85x20
+*internalBorder: 23
+URxvt*fading: 0
+URxvt*tintColor: #ffffff
+URxvt*shading: 0
+URxvt*inheritPixmap: False
+
+! special
+*.foreground:   #d0d0d0
+*.background:   #000000
+*.cursorColor:  #d0d0d0
+
+! black
+*.color0:       #000000
+*.color8:       #808080
+
+! red
+*.color1:       #ff0000
+*.color9:       #ff0000
+
+! green
+*.color2:       #33ff00
+*.color10:      #33ff00
+
+! yellow
+*.color3:       #ff0099
+*.color11:      #ff0099
+
+! blue
+*.color4:       #0066ff
+*.color12:      #0066ff
+
+! magenta
+*.color5:       #cc00ff
+*.color13:      #cc00ff
+
+! cyan
+*.color6:       #00ffff
+*.color14:      #00ffff
+
+! white
+*.color7:       #d0d0d0
+*.color15:      #ffffff
