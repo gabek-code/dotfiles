@@ -191,7 +191,7 @@ mode "resize" {
 
 # Using bumblebee-status here instead of ^
 bar {
-         status_command /home/gmk/.i3/bumblebee-status/bumblebee-status \
+         status_command $HOME/.i3/bumblebee-status/bumblebee-status \
                   -m playerctl pasink pasource \
                   indicator datetime battery \
                   -p playerctl.format="{{playerName}}" \
@@ -228,10 +228,10 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 # urxvt initialization
-exec xrdb /home/gmk/.Xresources
+exec xrdb $HOME/.Xresources
 
 # set wallpaper
-exec_always feh --bg-scale /home/gmk/pictures/wallpaper/i3_beautiful.png
+exec_always feh --bg-scale $HOME/pictures/wallpaper/i3_beautiful.png
 
 # run the compositor
 exec picom -b
@@ -240,7 +240,7 @@ exec picom -b
 exec unclutter
 
 # move this for $PATH..
-#bindsym $mod+Shift+l exec bash /home/gmk/scripts/lock.sh 
+#bindsym $mod+Shift+l exec bash $HOME/scripts/lock.sh 
 
 default_border none
 
