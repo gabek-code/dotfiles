@@ -62,7 +62,7 @@ alias diff='colordiff'
 alias hex='ghex'
 
 # directory pushes 
-if [ -f $HOME/gksrc ]; then 
+if [ -d $HOME/gksrc ]; then 
     alias popengl='pushd $GKSRC/playground/opengl'
     alias pglren='pushd $GKSRC/playground/gl-renderer'
     alias pcdump='pushd /var/lib/systemd/coredump'
@@ -70,7 +70,7 @@ if [ -f $HOME/gksrc ]; then
 fi
 
 # pacman/yay aliases
-if [ -f /etc/arch-release ]; then 
+if [ -d /etc/arch-release ]; then 
     alias search='sudo pacman -Ss'
     alias update='sudo pacman -Syu'
     alias ysearch='yay -Ss'
@@ -78,7 +78,7 @@ if [ -f /etc/arch-release ]; then
 fi
 
 # RU directory pushes
-if [ -f $HOME/gksrc/rockefeller ]; then
+if [ -d $HOME/gksrc/rockefeller ]; then
     alias pinclude='pushd $HOME/RU-repo/include'
     alias psrc='pushd $HOME/RU-repo/src'
     alias pmfdump='pushd $HOME/RU-repo/src/mfdump'
