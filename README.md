@@ -1,13 +1,17 @@
 ![2022-09-02-194049_1920x1080_scrot](https://user-images.githubusercontent.com/11047382/188246917-01d2f5b4-a21c-479a-bb95-19d2db75f41f.png)
-# GabeK Dotfiles
+# My sweet and simple dotfiles
+
+Here-lies a collection of my personal dotfiles that I use both for work and my own machines.
+
+*NOTE:* Personally I don't recommend using the bash config, as it is currently catered more for my own environments. That being said, `.bash/aliases.sh` may prove useful to you for some convenient shortcuts.
 
 ---
-# Installation
-This was made using `git stow` in mind.
+# Usage
+These dotfiles are organized in such a way for the use of [GNU stow](https://www.gnu.org/software/stow/). If you don't use `stow` already, you probably want to 🤔
 
 Example usage:
 ```bash
 cd dotfiles
 stow bash
 ```
-This will create a symbolic link from all the files in the `dotfiles/bash` directory, in your `$HOME` directory.
+This will create a symbolic link at `$HOME` for all the files (recursively) in `dotfiles/bash`.
