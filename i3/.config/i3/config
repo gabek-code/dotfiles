@@ -117,6 +117,10 @@ bindsym $mod+Shift+n exec "redshift -x && redshift -O 3500"
 # config_edit binding
 bindsym $mod+c exec "alacritty -e config_edit"
 
+#bindsym $mod+g exec "alacritty -e $(pglren && cd build && make && ./game)"
+bindsym $mod+g exec --no-startup-id "alacritty -e glren" --id 
+for_window [class="Title"] floating enable
+
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -249,7 +253,6 @@ bindsym $mod+z exec i3-msg "gaps outer current minus 5"
 
 bindsym $mod+Shift+x exec i3-msg "gaps inner current plus 5"
 bindsym $mod+x exec i3-msg "gaps inner current minus 5"
-
 
 gaps inner 10
 gaps outer 0

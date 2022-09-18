@@ -61,13 +61,17 @@ alias gdb='cgdb'
 alias diff='colordiff'
 alias hex='ghex'
 
-# directory pushes 
 if [ -d $HOME/gksrc ]; then 
+    # directory pushes 
+    GKSRC="$HOME/gksrc"
     alias popengl='pushd $GKSRC/playground/opengl'
     alias pglren='pushd $GKSRC/playground/gl-renderer'
     alias pcdump='pushd /var/lib/systemd/coredump'
     alias ppw='pushd $GKSRC/web/personal-website/'
+    # glren
+    alias capture='renderdoccmd capture $GKSRC/playground/gl-renderer/build/game'
 fi
+
 
 # pacman/yay aliases
 if [ -d /etc/arch-release ]; then 
@@ -95,7 +99,7 @@ fi
 alias rm='rm -i'
 alias delete='mv -t ~/.trash'
 
-# ??
+# syntax-highlighting for 'cat'
 alias ccat='pygmentize -g'
 
 # GPU/Prime aliases

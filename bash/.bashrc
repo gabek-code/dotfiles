@@ -15,6 +15,15 @@ HISTFILESIZE=2000
 # should be on the output of commands, not on the prompt
 force_color_prompt=yes
 
+# colored man-pages
+export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\e[01;37m'       # begin bold
+export LESS_TERMCAP_me=$'\e[0m'           # end all mode like so, us, mb, md, mr
+export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\e[45;93m'       # start standout mode
+export LESS_TERMCAP_ue=$'\e[0m'           # end underline
+export LESS_TERMCAP_us=$'\e[4;93m'        # start underlining
+
 # Blinking box-cursor
 echo -e "\033[1 q"
 

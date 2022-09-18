@@ -20,6 +20,7 @@ endif
 Plug 'godlygeek/tabular'                      " tab folding [req by nerdtree]
 Plug 'preservim/nerdtree'                     " File explorer/navigator
 Plug 'ryanoasis/vim-devicons'                 " icons for nerdtree
+Plug 'rust-lang/rust.vim'                     " Rust Language integration
 
 Plug 'Yggdroot/indentline'                    " line indentation preview
 Plug 'PotatoesMaster/i3-vim-syntax'           " i3 config sh'ing 
@@ -40,7 +41,7 @@ Plug 'tikhomirov/vim-glsl'                    " GLSL syntax
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'         " Cycle through colorschemes
 
-Plug 'folke/todo-comments.nvim'
+"Plug 'folke/todo-comments.nvim'
 
 if has('nvim')
   Plug 'neovim/nvim-lspconfig'                  " NeoVim LSP
@@ -61,8 +62,10 @@ set clipboard=unnamedplus " TODO: ??
 set encoding=utf-8
 set cmdheight=2
 
-colorscheme gruvbox
-colorscheme moonshine_minimal
+if has('nvim')
+    colorscheme gruvbox
+endif
+colorscheme moonshine
 
 " Some colorschemes I like.... and may possibly use again.
 " colorscheme gryffin
@@ -108,6 +111,7 @@ nnoremap <leader>g :Goyo \| set linebreak<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>c :noh<CR>
 nnoremap <leader>s :NextColorScheme<CR>
+nnoremap <leader>S :PreviousColorScheme<CR>
 
 if has('nvim')
   nnoremap <leader>t :Telescope<CR>
@@ -155,7 +159,15 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 let g:ale_fix_on_save = 1
 
+"augroup filetype_html
+"    autocmd!
+"augroup END
+
 " set tabs for css/less files
 
-autocmd Filetype css setlocal tabstop=2 shiftwidth=2 softtabstop=2
+" T:2 S:2 for JS/Web + ALE
+autocmd BufNewFile,BufRead *.js,*.jsx,*.css,*.less,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufNewFile,BufRead *.js,*.jsx,*.css,*.less,*.html let g:ale_enabled = 1
+
+" Filetype for shader files
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.shader set ft=glsl

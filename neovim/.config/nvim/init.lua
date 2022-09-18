@@ -11,5 +11,5 @@ require('keymaps');
 
 -- Configuration Modules
 require('config.lsp');
-require('config.todohighlight');
+--require('config.todohighlight');
 require('config.treesitter');
