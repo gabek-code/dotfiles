@@ -118,7 +118,7 @@ bindsym $mod+Shift+n exec "redshift -x && redshift -O 3500"
 bindsym $mod+c exec "alacritty -e config_edit"
 
 #bindsym $mod+g exec "alacritty -e $(pglren && cd build && make && ./game)"
-bindsym $mod+g exec --no-startup-id "alacritty -e glren" --id 
+bindsym $mod+g exec --no-startup-id "alacritty -e glren"
 for_window [class="Title"] floating enable
 
 # focus the child container
@@ -196,14 +196,14 @@ mode "resize" {
 # Using bumblebee-status here instead of ^
 bar {
          status_command $HOME/.i3/bumblebee-status/bumblebee-status \
-                  -m playerctl pasink pasource \
-                  indicator datetime battery \
+                  -m spacer pasink brightness spacer \
+                  indicator spacer datetime battery \
                   -p playerctl.format="{{playerName}}" \
-                  -p time.format="%H:%M" \
-                  -p datetime.format="%a, %b %e %Y - %H:%M:%S" \
+                  -p time.format="%H:%M" \ -p datetime.format="%a, %b %e %Y - %H:%M:%S" \
                   -p nic.exclude="eno2, lo" \
+                  -p brightness.interval=1s \
                   -t night-powerline
-                  font pango:Inconsolata 12
+                  font pango:Inconsolata 11
                   position top
 
    colors {
@@ -216,12 +216,14 @@ bar {
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-# Default brightness to 60%
-exec brightnessctl s 60%
+# Default brightness
+exec brightnessctl s 80%
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec brightnessctl s +5% #increase screen brightness 
-bindsym XF86MonBrightnessDown exec brightnessctl s 5%- #increase screen brightness 
+bindsym XF86MonBrightnessUp         exec brightnessctl s +5%
+bindsym XF86MonBrightnessDown       exec brightnessctl s 5%-
+bindsym Shift+XF86MonBrightnessUp   exec brightnessctl s 100%
+bindsym Shift+XF86MonBrightnessDown exec brightnessctl s 5%
 
 
 # Media player controls

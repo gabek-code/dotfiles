@@ -159,7 +159,10 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 let g:ale_fix_on_save = 1
 
-"augroup filetype_html
+" disable conceal
+let g:vim_json_conceal=0
+
+augroup filetype_html
 "    autocmd!
 "augroup END
 
@@ -167,7 +170,7 @@ let g:ale_fix_on_save = 1
 
 " T:2 S:2 for JS/Web + ALE
 autocmd BufNewFile,BufRead *.js,*.jsx,*.css,*.less,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd BufNewFile,BufRead *.js,*.jsx,*.css,*.less,*.html let g:ale_enabled = 1
+"autocmd BufNewFile,BufRead *.js,*.jsx,*.css,*.less,*.html let g:ale_enabled = 1
 
 " Filetype for shader files
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.shader set ft=glsl

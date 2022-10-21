@@ -11,6 +11,8 @@ export EDITOR="nvim"
 export SCRIPTS=$HOME/.scripts
 export PATH=$HOME/bin:$SCRIPTS:$SCRIPTS/util:$SCRIPTS/pacman:$PATH
 
+export BROWSER=/usr/bin/firefox
+
 set bell-style none
 
 # Source the bashrc
