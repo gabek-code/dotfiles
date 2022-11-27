@@ -5,6 +5,7 @@ let &packpath=&runtimepath
 source ~/.vimrc
 
 set guicursor=i:block
+set conceallevel=0
 ]])
 
 require('keymaps');

@@ -160,7 +160,13 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_fix_on_save = 1
 
 " disable conceal
+set conceallevel=0
 let g:vim_json_conceal=0
+let g:vim_markdown_conceal=0
+let g:vim_markdown_conceal_code_blocks=0
+
+let g:indentLine_concealcursor = 'inc'
+let g:indentLine_conceallevel = 0
 
 augroup filetype_html
 "    autocmd!
