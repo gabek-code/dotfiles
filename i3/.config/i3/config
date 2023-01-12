@@ -45,7 +45,7 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+Shift+s exec scrot -q 100 -e 'mv $f $HOME/pictures/scrot'
+bindsym $mod+Shift+s exec scrot -q 100 -e 'mv $f '$HOME'/pictures/scrot'
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -97,9 +97,9 @@ bindsym $mod+v split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+e layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+s layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -118,7 +118,8 @@ bindsym $mod+Shift+n exec "redshift -x && redshift -O 3500"
 bindsym $mod+c exec "alacritty -e config_edit"
 
 #bindsym $mod+g exec "alacritty -e $(pglren && cd build && make && ./game)"
-bindsym $mod+g exec --no-startup-id "alacritty -e glren"
+bindsym $mod+g exec --no-startup-id "alacritty -e glren --opengl"
+bindsym $mod+Shift+g exec --no-startup-id "alacritty -e glren --vulkan"
 for_window [class="Title"] floating enable
 
 # focus the child container

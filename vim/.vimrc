@@ -29,6 +29,8 @@ Plug 'mxw/vim-jsx'                            " jsx sh'ing
 Plug 'plasticboy/vim-markdown'                " markdown editing
 Plug 'itchyny/lightline.vim'                  " lightweight status bar
 
+Plug 'lervag/vimtex'                          " LaTeX tools
+
 Plug 'gruvbox-community/gruvbox'              " gruvbox colorscheme
 Plug 'flazz/vim-colorschemes'                 " colorscheme collection 
 Plug 'ap/vim-css-color'                       " CSS color preview
@@ -111,11 +113,7 @@ nnoremap <leader>g :Goyo \| set linebreak<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>c :noh<CR>
 nnoremap <leader>s :NextColorScheme<CR>
-nnoremap <leader>S :PreviousColorScheme<CR>
-
-if has('nvim')
-  nnoremap <leader>t :Telescope<CR>
-endif
+nnoremap <leader>S :PrevColorScheme<CR>
 
 " Remap for tabswitches
 nnoremap <A-1> 1gt
@@ -180,3 +178,9 @@ autocmd BufNewFile,BufRead *.js,*.jsx,*.css,*.less,*.html setlocal tabstop=2 shi
 
 " Filetype for shader files
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.shader set ft=glsl
+
+" LaTeX settings
+let g:vimtex_view_method = 'mupdf'
+let g:vimtex_view_general_options
+    \ = '-reuse-instance -forward-search @tex @line @pdf'
+let g:vimtex_compiler_latexmk= {'options' : ['-pdf', '-shell-escape', '-r ~/.config/latexkmk/latexmkrc', '-verbose', '-file-line-error', '-synctex=1', '-interaction=nonstopmode',],} " we need to enable -shell-escape to be able to use externalization library for avioiding recompiling unchanged diagrams/graphs created using tikz/pgfplots

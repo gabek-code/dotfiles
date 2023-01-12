@@ -121,6 +121,9 @@ alias cowfortune='fortune | cowsay'
 alias starwars='telnet towel.blinkenlights.nl'
 alias welcome='toilet -f mono12 -F metal "Go fuck yourself."'
 
+# LaTeX
+alias latexwatch='latexmk -pdf -pvc -r ~/.config/latexmk/latexmkrc'
+
 # Valgrind testing:
 alias valgdb='valgrind --vgdb=yes --vgdb-error=0'
 

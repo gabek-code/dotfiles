@@ -6,7 +6,7 @@ require('nvim-treesitter.configs').setup {
     auto_install = true,
     --ignore_install = { "javascript" },
     -- list of languages that will be disabled
-    disable = { "md", "javascript" },
+    disable = { "md", "tex", "javascript" },
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
