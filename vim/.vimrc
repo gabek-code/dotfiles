@@ -15,6 +15,7 @@ Plug 'w0rp/ale'                               " linting and formatting
 if has('nvim')
   Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
   Plug 'nvim-lua/plenary.nvim'                  " [dep] async for neo-vim
+  Plug 'ggandor/leap.nvim'                    " leap search
 endif
 
 Plug 'godlygeek/tabular'                      " tab folding [req by nerdtree]
@@ -111,6 +112,7 @@ nnoremap <Space> <Nop>
 " Normal mode reamps for useful commands/plguins 
 nnoremap <leader>g :Goyo \| set linebreak<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>N :NERDTreeMirror<CR>
 nnoremap <leader>c :noh<CR>
 nnoremap <leader>s :NextColorScheme<CR>
 nnoremap <leader>S :PrevColorScheme<CR>

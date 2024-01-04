@@ -8,6 +8,9 @@ set guicursor=i:block
 set conceallevel=0
 ]])
 
+-- enable Leap
+require('leap').add_default_mappings()
+
 require('keymaps');
 
 -- Configuration Modules
