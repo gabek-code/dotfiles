@@ -12,3 +12,5 @@ lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(
 lg3 = log --all --decorate --oneline --graph
 lg = !"git lg1"
 st = status
+[push]
+	autoSetupRemote = true
